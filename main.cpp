@@ -77,7 +77,7 @@ void GreyBackground(int key, int x, int y){
 
 void BlackBackground(unsigned char key, int x, int y){
     if(glutGetModifiers() == GLUT_ACTIVE_CTRL){
-        if(key == ' '){
+        if(key == ' ' || key == 0){ //' ' for Windows and 0 for Linux (Tested on Debian)
             BgColor = COLOR_BLACK;
         }
     }
